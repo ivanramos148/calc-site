@@ -1,7 +1,29 @@
-function multiply(num1,num2) {
-    return num1 * num2;
-}
-var num1 = parseInt(prompt("add first number to multiply"));
-var num2 = parseInt(prompt("add second number to get answer"));
-var answer = multiply(num1, num2);
-alert("you got the answer " +answer+" congrats");
+jQuery(document).ready(function() {
+
+  alert("hey");
+
+  var statement = "";
+
+  function addTo(char) {
+    statement += char;
+    alert(statement);
+  };
+
+  function executeClear() {
+    var answer = eval(statement);
+    alert(answer);
+    statement = "";
+  };
+
+  jQuery("seven").click(function() {
+    addTo("7");
+  });
+
+  jQuery("plus").click(function() {
+    addTo("+");
+  });
+
+  jQuery("equals").click(function() {
+    executeClear();
+
+};
